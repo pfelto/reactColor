@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from 'prop-types';
 import Star from "./star";
 
-const StarRating = ({starsSelected=0 , totalStars=5 }) => {    
+const StarRating = ({starsSelected=0 , totalStars=5 , onRate=f=>f }) => {    
     const starsRatingArray = Array(totalStars).fill(null).map((star,i) => 
     <Star key={i}
         selected={i<starsSelected}
-        onClick={() => console.log('clicked')}/>);
+        onClick={() => onRate(i+1)}/>);
     return(
         <div>
         {starsRatingArray}
