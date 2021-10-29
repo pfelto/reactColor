@@ -1,13 +1,79 @@
   
-  .color {
-    width: 50%;
+  .App { 
+      display: flex;
+      flex-direction: column;
+      border: 5px dotted purple;
+      padding: 5px;
+
+  }  
+
+  .App > h1 {
+    align-self: center;
+    justify-content: center;
+}
+
+  form {
+      display: flex;
+      border: 2px black solid;
+      padding: 5px;
+      margin: 2px;
+
+        /*make input for color largest then color button then add */
+    input[type='text']{ 
+        flex:3;
+    }
+    input[type='color']{ 
+        flex:1;
+    }
+    button{
+        flex: 1;
+    }
+  }
+
+.colorList {
+    display: grid;
+    grid-template-columns: 1fr;
     border: 2px black solid;
-  }
-  
-  .box {
-    height: 50px;
-    width: 100%;
-  }
+    margin: 2px;
+}
+.color {
+    padding: 5px;
+    margin: 2px;
+    border: 2px black solid;
+    display: grid;
+    grid-template:   
+    "hdr hdr hdr hdrright" minmax(min-content, auto)
+    "boxctx boxctx boxctx ." minmax(min-content, auto)
+    "starctx starctx starctx ." minmax(min-content, auto);
+    
+    h1{
+        grid-area: hdr;
+        justify-self: center;
+    }
+
+    button{
+        grid-area: hdrright;
+        align-self: flex-start;
+        justify-self: flex-end;
+    }
+
+    .box {
+        height: 50px;
+        width: 100%;
+        grid-area: boxctx;
+
+    }
+
+    .starRating{
+        grid-area: starctx;
+        align-self: center;
+        justify-self: center;
+
+        p{
+            text-align: center;
+        }
+    }
+}  
 
 .star {
     cursor: pointer;

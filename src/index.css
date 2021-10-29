@@ -337,14 +337,70 @@ template {
   display: none;
 }
 
-.color {
-  width: 50%;
-  border: 2px black solid;
+.App {
+  display: flex;
+  flex-direction: column;
+  border: 5px dotted purple;
+  padding: 5px;
 }
 
-.box {
+.App > h1 {
+  align-self: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  border: 2px black solid;
+  padding: 5px;
+  margin: 2px;
+  /*make input for color largest then color button then add */
+}
+form input[type=text] {
+  flex: 3;
+}
+form input[type=color] {
+  flex: 1;
+}
+form button {
+  flex: 1;
+}
+
+.colorList {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 2px black solid;
+  margin: 2px;
+}
+
+.color {
+  padding: 5px;
+  margin: 2px;
+  border: 2px black solid;
+  display: grid;
+  grid-template: "hdr hdr hdr hdrright" minmax(min-content, auto) "boxctx boxctx boxctx ." minmax(min-content, auto) "starctx starctx starctx ." minmax(min-content, auto);
+}
+.color h1 {
+  grid-area: hdr;
+  justify-self: center;
+}
+.color button {
+  grid-area: hdrright;
+  align-self: flex-start;
+  justify-self: flex-end;
+}
+.color .box {
   height: 50px;
   width: 100%;
+  grid-area: boxctx;
+}
+.color .starRating {
+  grid-area: starctx;
+  align-self: center;
+  justify-self: center;
+}
+.color .starRating p {
+  text-align: center;
 }
 
 .star {
@@ -360,5 +416,18 @@ template {
 .star.selected {
   background-color: red;
 }
+
+@media only screen and (min-width: 768px) {
+  .colorList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* end of medium media query */
+@media only screen and (min-width: 1024px) {
+  .colorList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* end of large media query */
 
 /*# sourceMappingURL=index.css.map */

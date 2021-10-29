@@ -1,7 +1,7 @@
 import Colors from './colors'
 
 const ColorsList = ({colors=[], onRemove=f=>f , onRate=f=>f }) => 
-<div>
+<div className='colorList'>
     {(colors.length === 0) ? 
     <p>No Colors Listed. (Add a Color)</p> :
     colors.map(color =>

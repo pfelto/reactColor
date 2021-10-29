@@ -3,3 +3,11 @@
 @import "variables";
 
 @import "small";
+
+@media only screen and (min-width: 768px){
+    @import "medium";
+} /* end of medium media query */
+
+@media only screen and (min-width: 1024px){
+    @import "large";
+} /* end of large media query */

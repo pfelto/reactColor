@@ -51,7 +51,8 @@ class App extends React.Component {
         const { colors } = this.state;
         //console.log(colors);
         return (
-            <div>
+            <div className='App'>
+                <h1> Color Rating App </h1>
                 <AddColorForm onNewColor={(title,color) => this.addColor(title,color)}/>
                 <ColorsList colors={colors} 
                 onRemove={(id) => this.removeColor(id)} 

@@ -17,6 +17,24 @@ let ColorsData = [
         'color': '#ff0000',
         'rating': 0,
     },
+    {
+        'id': 4,
+        'title': 'Green',
+        'color': '#00ff00',
+        'rating': 0,
+    },
+    {
+        'id': 5,
+        'title': 'Blue',
+        'color': '#0000ff',
+        'rating': 0,
+    },
+    {
+        'id': 6,
+        'title': 'Purple',
+        'color': '#800080',
+        'rating': 0,
+    },
 ]
 
 export default ColorsData
