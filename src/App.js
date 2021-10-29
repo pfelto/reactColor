@@ -36,14 +36,14 @@ class App extends React.Component {
     }
 
     rateColor(id, rating){
-        console.log('Wow you are here!');
+        //console.log('Wow you are here!');
         const colors = this.state.colors.map(color =>
             (color.id !== id) ? color :
             {
                 ...color,
                 rating
             });
-            console.log(colors);
+            //console.log(colors);
             this.setState({colors});
     }
 
@@ -57,8 +57,8 @@ class App extends React.Component {
                 <ColorsList colors={colors} 
                 onRemove={(id) => this.removeColor(id)} 
                 onRate={(id,rating) => {
-                    console.log(id);
-                    console.log(rating);
+                    //console.log(id);
+                    //console.log(rating);
                     this.rateColor(id,rating);
                     }}/>
             </div>
