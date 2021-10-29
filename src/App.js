@@ -3,7 +3,7 @@ import ColorsData from "./ColorsData";
 import ColorsList from "./colorList";
 import AddColorForm from "./addColorForm"
 
-let id = 4;
+let id = 7;
 
 class App extends React.Component {
     constructor(props){
